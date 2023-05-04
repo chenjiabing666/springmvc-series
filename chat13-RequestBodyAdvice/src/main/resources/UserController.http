@@ -1,0 +1,10 @@
+POST http://localhost:8080/chat13/user/add
+Content-Type: application/json
+
+0A10mig46aZI76jwpgmeeuqDHc7h4Zq/adoY6d5r2mY=
+
+###
+POST http://localhost:8080/chat13/user/adds
+Content-Type: application/json
+
+UzWvCsrqt7ljXVI18XBXU3B9S4P2bMB72vH0HNst1GhMt5HTAiodbJwr7r8PuWWs1gM5iAYY4DZWfLgsTbizAEwEtqw8VuCuk2hYBjoCtCc=

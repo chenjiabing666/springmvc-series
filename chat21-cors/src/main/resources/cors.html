@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#cors-btn1").click(function () {
+                $.ajax({
+                    url: "http://localhost:8080/chat21/cors/test1",
+                    success: function (data) {
+                        console.log(JSON.stringify(data));
+                    }
+                });
+            });
+            $("#cors-btn2").click(function () {
+                $.ajax({
+                    url: "http://localhost:8080/chat21/cors/test2",
+                    success: function (data) {
+                        console.log(JSON.stringify(data));
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<button id="cors-btn1">跨域测试test1</button>
+<button id="cors-btn2">跨域测试test2</button>
+</body>
+</html>

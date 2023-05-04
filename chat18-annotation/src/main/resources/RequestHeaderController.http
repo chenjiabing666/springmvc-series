@@ -1,0 +1,40 @@
+### 所有头都传递
+GET http://localhost:8080/chat18/requestheader/test1
+name: java
+age: 25
+header1: java
+Header1: spring
+
+### 头name不传递，会使用默认值
+GET http://localhost:8080/chat18/requestheader/test1
+age: 25
+header1: java
+header1: spring
+
+### required为true的，没有默认值的，不传递，会报错
+GET http://localhost:8080/chat18/requestheader/test1
+name: java
+header1: java
+header1: spring
+
+### 用法2：未指定name属性，参数为Map<String,Strintg>类型，用来接收所有头
+GET http://localhost:8080/chat18/requestheader/test2
+name: java
+age: 25
+header1: java
+header1: spring
+
+### 用法3：不指定name属性，参数为MultiValueMap类型，用来接收所有头
+GET http://localhost:8080/chat18/requestheader/test3
+name: java
+age: 25
+header1: java
+header1: spring
+
+### 用法4：不指定name属性，参数为HttpHeaders类型，用来接收所有头
+GET http://localhost:8080/chat18/requestheader/test4
+name: java
+age: 25
+header1: java
+header1: spring
+

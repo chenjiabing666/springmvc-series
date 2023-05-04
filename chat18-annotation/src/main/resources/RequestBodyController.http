@@ -1,0 +1,97 @@
+### 发送纯文本
+POST http://localhost:8080/chat18/requestbody/test1
+Content-Type: text/plain
+
+这里是body部分,欢迎访问我的博客：itsoku.com,上面有更多系列文章
+
+### 发送表单数据，相当于提交表单
+POST http://localhost:8080/chat18/requestbody/test1
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&blogs=itsoku.com
+
+### 发送xml数据
+POST http://localhost:8080/chat18/requestbody/test1
+Content-Type: text/xml
+
+<CourseList>
+    <Course>Java高并发系列</Course>
+    <Course>MyBatis系列</Course>
+    <Course>MySQL系列</Course>
+    <Course>Spring高手系列</Course>
+    <Course>分布式事务高手系列</Course>
+</CourseList>
+
+### 发送json数据
+POST http://localhost:8080/chat18/requestbody/test1
+Content-Type: application/json;charset=UTF-8
+
+{
+  "blog": "itsoku.com",
+  "course": [
+    "Spring高手系列",
+    "MySQL系列",
+    "高并发系列"
+  ]
+}
+
+### 发送json数据，后端用对象接收
+POST http://localhost:8080/chat18/requestbody/test2
+Content-Type: application/json;charset=UTF-8
+
+{
+  "name": "路人",
+  "age": 35,
+  "skills": [
+    "高并发",
+    "Spring",
+    "分布式事务",
+    "MQ",
+    "MySQL"
+  ]
+}
+
+### 后端使用Resource接收数据
+POST http://localhost:8080/chat18/requestbody/test3
+Content-Type: text/plain;charset=UTF-8
+
+后端使用Resource接收数据
+
+
+### 后端使用字节数组接收数据
+POST http://localhost:8080/chat18/requestbody/test4
+Content-Type: text/plain;charset=UTF-8
+
+itsoku.com
+
+### 发送json数据，后端用HttpEntity<User>接收
+POST http://localhost:8080/chat18/requestbody/test5
+Content-Type: application/json;charset=UTF-8
+
+{
+  "name": "路人",
+  "age": 35,
+  "skills": [
+    "高并发",
+    "Spring",
+    "分布式事务",
+    "MQ",
+    "MySQL"
+  ]
+}
+
+### 发送json数据，后端用对象接收
+POST http://localhost:8080/chat18/requestbody/test6
+Content-Type: application/json;charset=UTF-8
+
+{
+  "name": "路人",
+  "age": 35,
+  "skills": [
+    "高并发",
+    "Spring",
+    "分布式事务",
+    "MQ",
+    "MySQL"
+  ]
+}

@@ -1,0 +1,8 @@
+###
+POST http://localhost:8080/chat18/cookievalue/test1
+Cookie: name=java; age=26
+
+
+###
+POST http://localhost:8080/chat18/cookievalue/test2
+Cookie: name=java; age=26

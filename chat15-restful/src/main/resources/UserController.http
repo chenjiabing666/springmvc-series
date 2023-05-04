@@ -1,0 +1,23 @@
+### 获取用户列表
+GET http://localhost:8080/chat15/user/list
+
+### 根据用户id获取用户信息
+GET http://localhost:8080/chat15/user/1
+
+### 新增用户信息
+POST http://localhost:8080/chat15/user
+Content-Type: multipart/form-data
+
+userId=3&name=Maven高手系列
+
+### 修改用户信息
+POST http://localhost:8080/chat15/user
+Content-Type: application/x-www-form-urlencoded
+
+_method=PUT&userId=3&name=MySQL高手系列
+
+### 删除用户信息
+POST http://localhost:8080/chat15/user/1
+Content-Type: application/x-www-form-urlencoded
+
+_method=DELETE

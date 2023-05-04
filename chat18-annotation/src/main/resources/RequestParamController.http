@@ -1,0 +1,28 @@
+###
+POST http://localhost:8080/chat18/requestparam/test1
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=35&interests=篮球&interests=旅游&pets=小狗&pets=小猫
+
+###
+POST http://localhost:8080/chat18/requestparam/test1
+Content-Type: application/x-www-form-urlencoded
+
+age=35&interests=篮球&interests=旅游&pets=小狗&pets=小猫
+
+###
+POST http://localhost:8080/chat18/requestparam/test1
+Content-Type: application/x-www-form-urlencoded
+
+###
+POST http://localhost:8080/chat18/requestparam/test2
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=35&interests=篮球&interests=旅游&pets=小狗&pets=小猫
+
+###
+POST http://localhost:8080/chat18/requestparam/test3
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+
+name=路人&age=35&interests=篮球&interests=旅游&pets=小狗&pets=小猫

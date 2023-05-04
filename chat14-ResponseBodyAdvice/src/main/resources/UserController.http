@@ -1,0 +1,13 @@
+POST http://localhost:8080/chat14/user
+
+###
+POST http://localhost:8080/chat14/user/list
+
+###
+POST http://localhost:8080/chat14/user/m1
+
+###
+POST http://localhost:8080/chat14/user/m2
+
+###
+POST http://localhost:8080/chat14/user/m3

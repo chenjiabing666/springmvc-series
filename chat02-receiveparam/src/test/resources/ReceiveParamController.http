@@ -1,0 +1,54 @@
+### test1
+POST http://localhost:8080/chat02/receiveparam/test1.do
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=30
+
+
+### test2
+POST http://localhost:8080/chat02/receiveparam/test2.do
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=30
+
+
+### test3
+POST http://localhost:8080/chat02/receiveparam/test3.do
+Content-Type: application/x-www-form-urlencoded
+
+pname=路人&page=30
+
+
+### test4
+POST http://localhost:8080/chat02/receiveparam/test4.do
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=30
+
+
+### test4
+POST http://localhost:8080/chat02/receiveparam/test4.do
+Content-Type: application/x-www-form-urlencoded
+
+pname=路人&page=30
+
+
+### test5
+POST http://localhost:8080/chat02/receiveparam/test5.do
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&age=30&workYears=10&workAddress=上海市
+
+
+### test6
+POST http://localhost:8080/chat02/receiveparam/test6.do
+Content-Type: application/x-www-form-urlencoded
+
+userInfo.name=路人&userInfo.age=30&workInfo.workAge=10&workInfo.workAddress=上海市&experienceInfos[0].company=百度&experienceInfos[0].position=Java开发&experienceInfos[1].company=案例&experienceInfos[1].position=Java资深开发
+
+
+### test7#1
+POST http://localhost:8080/chat02/receiveparam/路人/30.do
+
+### test7#2
+POST http://localhost:8080/chat02/receiveparam/1/2.do

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 设置包扫描路径 -->
+    <context:component-scan base-package="com.javacode2018.springmvc.chat09.controller"/>
+    <!-- 添加mvc注解驱动 -->
+    <mvc:annotation-driven/>
+
+<!-- interceptors用来定义拦截器，其内部可以定义多个拦截器 -->
+<mvc:interceptors>
+    <!-- mvc:interceptor 标签用来定义一个拦截器 -->
+    <mvc:interceptor>
+        <!-- 用来指定拦截器匹配的url -->
+        <mvc:mapping path="/user/**"/>
+        <!-- 用来指定拦截器排除的url，即这些url不会被拦截器拦截 -->
+        <mvc:exclude-mapping path="/user/login"/>
+        <!-- 用来指定拦截器 -->
+        <bean class="com.javacode2018.springmvc.chat09.intercetor.HandlerInterceptor1"/>
+    </mvc:interceptor>
+    <!-- mvc:interceptor 标签用来定义一个拦截器 -->
+    <mvc:interceptor>
+        <!-- 用来指定拦截器匹配的url -->
+        <mvc:mapping path="/user/**"/>
+        <!-- 用来指定拦截器排除的url，即这些url不会被拦截器拦截 -->
+        <mvc:exclude-mapping path="/user/login"/>
+        <!-- 用来指定拦截器 -->
+        <bean class="com.javacode2018.springmvc.chat09.intercetor.HandlerInterceptor2"/>
+    </mvc:interceptor>
+</mvc:interceptors>
+</beans>

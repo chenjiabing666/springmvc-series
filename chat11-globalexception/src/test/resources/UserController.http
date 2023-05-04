@@ -1,0 +1,8 @@
+### code正常的情况
+GET http://localhost:8080/chat11/user/getUserName?code=6666
+
+### code错误的情况
+GET http://localhost:8080/chat11/user/getUserName?code=123
+
+### code必须是数字类型，我们搞个非数字的，让springmvc框架触发类型转换异常，看看效果
+GET http://localhost:8080/chat11/user/getUserName?code=abc

@@ -1,0 +1,18 @@
+###
+POST http://localhost:8080/chat17/test2
+Referer: http://www.java-family.cn
+h1: v1
+h2: a
+h2: b
+
+###
+POST http://localhost:8080/chat17/user1
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&pet.name=小狗&pet.age=1
+
+###
+POST http://localhost:8080/chat17/user1
+Content-Type: application/x-www-form-urlencoded
+
+name=路人&pet=小猫,2

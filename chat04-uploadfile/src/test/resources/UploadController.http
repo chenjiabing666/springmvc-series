@@ -1,0 +1,79 @@
+### 单个文件上传
+POST http://localhost:8080/chat04/upload1.do
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file1"; filename="1.jpg"
+
+< ./1.jpg
+--WebAppBoundary--
+
+
+### 多文件上传
+POST http://localhost:8080/chat04/upload2.do
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file1"; filename="1.jpg"
+Content-Type: image/jpeg
+
+< ./1.jpg
+--WebAppBoundary
+Content-Disposition: form-data; name="file2"; filename="2.jpg"
+Content-Type: image/jpeg
+
+< ./2.jpg
+--WebAppBoundary--
+
+### 多文件上传
+POST http://localhost:8080/chat04/upload3.do
+Content-Type: multipart/form-data; boundary=bound1
+
+--bound1
+Content-Disposition: form-data; name="name"
+
+路人
+--bound1
+Content-Disposition: form-data; name="age"
+
+30
+--bound1
+Content-Disposition: form-data; name="file1"; filename="1.jpg"
+
+< ./1.jpg
+--bound1
+Content-Disposition: form-data; name="file2"; filename="2.jpg"
+Content-Type: image/jpeg
+
+< ./2.jpg
+--bound1--
+
+### 多文件上传
+POST http://localhost:8080/chat04/upload4.do
+Content-Type: multipart/form-data; boundary=bound1
+
+--bound1
+Content-Disposition: form-data; name="name"
+Content-Type: text/plain
+
+路人
+--bound1
+Content-Disposition: form-data; name="age"
+Content-Type: text/plain
+
+30
+--bound1
+Content-Disposition: form-data; name="headImg"; filename="1.jpg"
+
+< ./1.jpg
+--bound1
+Content-Disposition: form-data; name="idCardImg"; filename="2.jpg"
+Content-Type: image/jpeg
+
+< ./2.jpg
+--bound1
+Content-Disposition: form-data; name="idCardImg"; filename="3.jpg"
+Content-Type: image/jpeg
+
+< ./3.jpg
+--bound1--

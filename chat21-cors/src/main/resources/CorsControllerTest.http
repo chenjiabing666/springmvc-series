@@ -1,0 +1,7 @@
+###
+POST http://localhost:8080/chat21/cors/test1
+Accept: application/json
+
+###
+POST http://localhost:8080/chat21/cors/test1
+Accept: text/xml
